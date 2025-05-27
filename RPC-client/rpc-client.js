@@ -1,7 +1,9 @@
 const axios = require('axios');
+const dotenv = require('dotenv');
+dotenv.config();
 
 // Replace this with the actual server IP
-const SERVER_URL = 'http://10.42.0.138:3000/rpc';
+const SERVER_URL =`${process.env.SERVER_URL}/rpc`;
 
 const requestData = {
   jsonrpc: '2.0',
@@ -10,6 +12,7 @@ const requestData = {
   id: 1,
 };
 
+// console.log(SERVER_URL);
 axios.post(SERVER_URL, requestData)
   .then(response => {
     console.log('Response from server:', response.data);
