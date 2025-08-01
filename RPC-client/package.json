@@ -1,8 +1,19 @@
 {
+  "name": "rpc-client",
+  "version": "1.0.0",
+  "description": "RPC Client with gRPC message queue support",
+  "main": "rpc-client.js",
   "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@grpc/proto-loader": "^0.8.0",
     "axios": "^1.9.0",
     "body-parser": "^2.2.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0"
+  },
+  "scripts": {
+    "start": "node rpc-client.js",
+    "start:grpc": "node grpc-client.js",
+    "start:http": "node rpc-client.js"
   }
 }
